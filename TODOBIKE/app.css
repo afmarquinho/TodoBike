@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600;1,800&display=swap');
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body {
+    font-family: 'Bitter', serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: rgb(17, 17, 31);
+}
+p {
+  font-size: 1.5rem;
+}
+
+
+/* utilidades */
+.border-cards
+ {
+  border: 1px solid  rgb(255, 127, 50);
+}
+.maximo-width{
+  max-width: 120rem;
+  margin: 2rem auto;
+}
+.h2-orange{
+  color:rgb(255, 127, 50);
+}
+
+/* fin bloque utilidades */
+
+/* hreader-logo */
+
+.container_logo {
+  height: 15vh;
+  display:flex;
+  justify-content: center;
+}
+
+/* barra de navegacion */
+.nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-bottom: 1px solid rgb(211, 205, 205);
+}
+
+.nav a{
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: rgb(17, 17, 31);
+  padding: 1rem;
+  margin: 0;
+  transition: background-color 1s ease-out;
+}
+
+.nav a:hover {
+  background-color:rgb(17, 17, 31) ;
+  color: rgb(255, 127, 50);
+}
+
+/* hero */
+.hero {
+  height: 78vh;
+  background-image:linear-gradient( to left, rgba(223, 144, 42, 0.1) 20%, rgba(0, 0, 0, 1))
+  ,url(images/hero2.jpg);
+  background-repeat: no-repeat;
+  background-position:top center;
+  background-size:cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero h1, .hero h2 {
+  font-size: 5rem;
+  color: white;
+  margin-right: 6rem;
+}
+
+/* cards */
+.listado-cards{
+  max-width: 120rem;
+  margin: 2rem auto;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "componentes gafas gafas bicicletas"
+                        "llantas reparacion alquiler bicicletas";
+  gap: 1.8em;
+}
+
+.card{
+  border-radius: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+  transition-property:transform background-size;
+  transition-duration: 2s;
+}
+.card:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  background-size:150%;
+}
+
+.card p{
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: xx-large
+}
+.componentes{
+  grid-area: componentes;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url(images/componentes.jpg);
+}
+
+.llantas{
+  grid-area: llantas;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  url(images/llantas.jpg);
+}               
+.gafas{
+  grid-area: gafas;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  url(images/gafas.jpg);
+}
+.bicicletas{
+  grid-area: bicicletas;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  url(images/bmx-g6e124ad6f_1920.jpg);
+}
+.alquiler{
+    grid-area: alquiler;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url(images/alquiler.jpg.crdownload);
+}
+.reparacion{
+  grid-area: reparacion;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  url(images/reparacion.jpg);
+}
+
+
+
+
+
+/* cards 2 */
+.cards2{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 40vh; 
+  gap: 3rem; 
+  padding-bottom: 20rem;
+}
+.cards2 h2{
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+.cards2 li,
+.cards2 p{
+  line-height: 2.4rem;
+}
+.cards2 span{
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.gastos{
+  background-color: rgb(17, 17, 31);
+  color: white;
+  padding: 1rem 2rem;  
+  font-size: 1.4rem;
+}
+.recoger{
+  background-color: rgb(255, 127, 50);
+  padding: 1rem 2rem;  
+  font-size: 1.4rem;
+}
+.pago{
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 2rem;  
+  font-size: 1.4rem;
+}
+
+/* Footer */
+.btnFooter{
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: rgb(17, 17, 31);  
+  background-color: rgb(255, 127, 50);
+  padding: 0.5rem 1.5rem;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem; 
+}
+.btnFooter:hover{
+  cursor: pointer;
+}
+.btnFooter.activo{
+  background-color: rgb(17, 17, 31);
+  color:white;
+}
+
+.footer{
+  background-color: rgb(255, 127, 50);
+  position: fixed;
+  bottom: -100%;
+  width: 100vw;
+  transition: all 0.5s ease;
+}
+.footer.activo{
+  bottom: 0%;
+}
+
+footer h3{
+  font-size: 2.8rem;
+}
+
+.footerContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 118rem;
+  margin:0 auto;
+  gap: 2rem;
+}
